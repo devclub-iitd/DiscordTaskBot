@@ -1,0 +1,26 @@
+version: '3.4'
+
+services:
+  taskbot:
+    build: .
+    image: "${REGISTRY_NAME}devclubiitd/taskbot:0.1"
+    working_dir: /app
+    volumes:
+      - tinydb:/db/
+    env_file:
+      - ./.env
+    restart: always
+    ports:
+      - ${DEPLOY_PORT}:80
+    networks:
+      - "reverseproxy"
+      - "internal"
+
+volumes:
+  tinydb:
+
+networks:
+  reverseproxy:
+    external:
+      name: "reverseproxy"
+  internal:
