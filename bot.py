@@ -4,7 +4,7 @@ from tinydb import TinyDB, Query
 from dotenv import load_dotenv
 import os
 
-print('started')
+print('started', flush=True)
 
 load_dotenv()
 
@@ -108,7 +108,7 @@ class MyClient(discord.Client):
         await embed_msg.add_reaction(emoji=reaction)
 
     async def on_ready(self):
-        print('Logged on as {0}!'.format(self.user))
+        print('Logged on as {0}!'.format(self.user), flush=True)
 
     async def on_message(self, message):
         content = message.content

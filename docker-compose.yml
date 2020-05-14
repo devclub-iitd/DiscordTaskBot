@@ -9,6 +9,8 @@ services:
       - tinydb:/db/
     env_file:
       - ./.env
+    environment:
+      - VIRTUAL_HOST=${VIRTUAL_HOST}
     restart: always
     networks:
       - "reverseproxy"
