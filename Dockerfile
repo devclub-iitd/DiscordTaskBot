@@ -1,6 +1,10 @@
-FROM python:alpine3.7
-COPY . /app
+FROM gorialis/discord.py:minimal
+
 WORKDIR /app
+
+COPY requirements.txt ./
 RUN pip install -r requirements.txt
-EXPOSE 5000
-CMD python ./bot.py
+
+COPY . .
+
+CMD ["python", "bot.py"]
