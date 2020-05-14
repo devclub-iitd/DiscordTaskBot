@@ -4,6 +4,8 @@ from tinydb import TinyDB, Query
 from dotenv import load_dotenv
 import os
 
+print('started')
+
 load_dotenv()
 
 if not os.path.exists('/db'):

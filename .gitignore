@@ -127,5 +127,6 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
-.gitsecret/keys/random_seed
-!*.secret
+
+db.json
+.vscode
