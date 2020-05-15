@@ -4,6 +4,7 @@ from tinydb import TinyDB, Query
 from dotenv import load_dotenv
 import os
 
+
 print('started', flush=True)
 
 load_dotenv()
@@ -189,6 +190,5 @@ class MyClient(discord.Client):
                     else:
                         return
 
-
-client = MyClient()
+client = MyClient(proxy=os.getenv("HTTP_PROXY"))
 client.run(os.getenv("TOKEN"))
