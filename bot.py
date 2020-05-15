@@ -3,7 +3,9 @@ import datetime
 from tinydb import TinyDB, Query
 from dotenv import load_dotenv
 import os
+import logging
 
+logging.basicConfig(level=logging.DEBUG)
 
 print('started', flush=True)
 
