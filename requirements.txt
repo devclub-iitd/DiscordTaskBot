@@ -15,6 +15,6 @@ pyflakes==2.2.0
 python-dotenv==0.13.0
 tinydb==4.1.1
 typing-extensions==3.7.4.2
-websockets==8.1
+websockets==9.1
 yarl==1.4.2
 zipp==3.1.0
